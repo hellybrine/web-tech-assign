@@ -3,24 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internal Links</title>
+    <title>Internal Links Example</title>
 </head>
 <body>
-    <h1>Internal Links Example</h1>
-    <p>Click the links below to jump to specific sections of this page:</p>
-    <ul>
-        <li><a href="#section1">Go to Section 1</a></li>
-        <li><a href="#section2">Go to Section 2</a></li>
-        <li><a href="#section3">Go to Section 3</a></li>
-    </ul>
+    <h1>Networking Basics</h1>
 
-    <h2 id="section1">Section 1</h2>
-    <p>This is the content for Section 1.</p>
+    <!-- Internal Links to Sections -->
+    <nav>
+        <p><a href="#routing-info">Go to Routing Information</a></p>
+        <p><a href="#network-protocols">Go to Network Protocols</a></p>
+        <p><a href="#ip-addressing">Go to IP Addressing and Subnetting</a></p>
+    </nav>
 
-    <h2 id="section2">Section 2</h2>
-    <p>This is the content for Section 2.</p>
+    <!-- Section 1: Routing Information -->
+    <section id="routing-info">
+        <h2>A device whose primary purpose is Routing</h2>
+        <ul>
+            <li>Routers are connected to a network.</li>
+            <li>They have an IP address and a MAC address.</li>
+            <li>They forward packets not destined to themselves (unlike hosts).</li>
+            <li>When a router receives packets with an unknown Destination IP, packets are dropped.</li>
+            <li>Routers maintain a map of all the Networks they know about:</li>
+            <ul>
+                <li><strong>Routing Table</strong> - A routing table is populated by three methods:</li>
+                <ul>
+                    <li><strong>Directly Connected</strong>: Routes for attached networks.</li>
+                    <li><strong>Static Routing</strong>: Routes manually provided by an Admin.</li>
+                    <li><strong>Dynamic Routing</strong>: Routers automatically learn from other routers.</li>
+                </ul>
+            </ul>
+            <li>Routers also have <strong>ARP Tables</strong> - mapping of L3 to L2 addresses:</li>
+            <ul>
+                <li>Everything with an IP address has an ARP Table.</li>
+            </ul>
+        </ul>
+    </section>
 
-    <h2 id="section3">Section 3</h2>
-    <p>This is the content for Section 3.</p>
+    <!-- Section 2: Network Protocols -->
+    <section id="network-protocols">
+        <h2>Network Protocols</h2>
+        <p>A protocol is a set of <strong>rules</strong> and <strong>messages</strong> that form an <strong>Internet standard</strong>.</p>
+        <ul>
+            <li><strong>ARP</strong> - Address Resolution Protocol (RFC 826): Resolves IP to MAC mapping using ARP Requests/Responses.</li>
+            <li><strong>FTP</strong> - File Transfer Protocol</li>
+            <li><strong>SMTP</strong> - Simple Mail Transfer Protocol</li>
+            <li><strong>HTTP</strong> - Hyper Text Transfer Protocol</li>
+            <li><strong>SSL</strong> - Secure Sockets Layer</li>
+            <li><strong>TLS</strong> - Transport Layer Security</li>
+            <li><strong>HTTPS</strong> - HTTP secured with SSL/TLS</li>
+        </ul>
+    </section>
+
+    <!-- Section 3: IP Addressing and Subnetting -->
+    <section id="ip-addressing">
+        <h2>IP Addressing and Subnetting</h2>
+        <ul>
+            <li>An <strong>IP Address</strong> is the identity of each host.</li>
+            <li>An IP address consists of 32 Bits represented by <strong>four octets</strong>, each ranging from 0 to 255.</li>
+            <li>IP Addresses are hierarchically assigned, allowing for <strong>Subnetting</strong>.</li>
+        </ul>
+
+        <h3>Network Classes</h3>
+        <table border="1">
+            <tr>
+                <th>Network Class</th>
+                <th>Range</th>
+                <th>Subnet Mask</th>
+            </tr>
+            <tr>
+                <td>A</td>
+                <td>1.0.0.0 - 126.255.255.255</td>
+                <td>255.0.0.0</td>
+            </tr>
+            <tr>
+                <td>B</td>
+                <td>128.0.0.0 - 191.255.0.0</td>
+                <td>255.255.0.0</td>
+            </tr>
+            <tr>
+                <td>C</td>
+                <td>192.0.0.0 - 223.255.255.0</td>
+                <td>255.255.255.0</td>
+            </tr>
+            <tr>
+                <td>D</td>
+                <td>224.0.0.0 - 239.255.255.255</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>E</td>
+                <td>240.0.0.0 - 255.255.255.255</td>
+                <td>N/A</td>
+            </tr>
+        </table>
+
+        <p>The job of the subnet mask is to dictate how many devices can exist on a network. For example, with an IP address of 192.168.1.0 and a subnet mask of 255.255.255.0, we have access to 255 IP addresses, with three reserved as follows:</p>
+        <ul>
+            <li><strong>192.168.1.0</strong>: Network Address</li>
+            <li><strong>192.168.1.1</strong>: Gateway</li>
+            <li><strong>192.168.1.255</strong>: Broadcast Address</li>
+        </ul>
+    </section>
 </body>
 </html>
