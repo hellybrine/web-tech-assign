@@ -17,11 +17,13 @@
 
     <!-- Part B: Multiple Links within a Single Image -->
     <h2>Multiple Links within a Single Image</h2>
-    <img src="example-image.jpg" alt="Example Image with Links" usemap="#imagemap" width="300" height="200">
+    <img src="Assets/your-image.jpg" alt="Image with Links" usemap="#imagemap" width="100%" height="auto">
     <map name="imagemap">
-        <area shape="rect" coords="0,0,150,200" href="https://www.first-link.com" alt="First Link">
-        <area shape="rect" coords="150,0,300,200" href="https://www.second-link.com" alt="Second Link">
+    <!-- Left half of the image (Netflix) -->
+    <area shape="rect" coords="0,0,1000,1197" href="https://www.netflix.com" alt="Netflix" target="_blank">
+    <!-- Right half of the image (YouTube) -->
+    <area shape="rect" coords="1000,0,2000,1197" href="https://www.youtube.com" alt="YouTube" target="_blank">
     </map>
-    <p>In the image above, the left half links to one site and the right half links to another.</p>
+    <p>Click the left side for Netflix and the right side for YouTube.</p>
 </body>
 </html>
