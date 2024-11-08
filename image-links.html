@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image as Link</title>
+</head>
+<body>
+    <h1>Image as Link Example</h1>
+
+    <!-- Part A: Single Link with Image -->
+    <h2>Single Link with Image</h2>
+    <a href="https://www.example.com" target="_blank">
+        <img src="example-image.jpg" alt="Example Image" width="300" height="200">
+    </a>
+    <p>Clicking on the image above takes you to an external site.</p>
+
+    <!-- Part B: Multiple Links within a Single Image -->
+    <h2>Multiple Links within a Single Image</h2>
+    <img src="example-image.jpg" alt="Example Image with Links" usemap="#imagemap" width="300" height="200">
+    <map name="imagemap">
+        <area shape="rect" coords="0,0,150,200" href="https://www.first-link.com" alt="First Link">
+        <area shape="rect" coords="150,0,300,200" href="https://www.second-link.com" alt="Second Link">
+    </map>
+    <p>In the image above, the left half links to one site and the right half links to another.</p>
+</body>
+</html>
